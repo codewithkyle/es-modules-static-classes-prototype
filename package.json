@@ -1,0 +1,15 @@
+{
+  "name": "es-modules-static-classes-prototype",
+  "description": "Prototyping the ES Module import syntax for 'static' classes",
+  "author": "Kyle Andrews",
+  "scripts": {
+    "build": "npm run compile && npm run preview",
+    "compile": "tsc",
+    "preview": "serve ./docs"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^11.2.0",
+    "typescript": "^3.6.4"
+  }
+}
