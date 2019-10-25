@@ -21,12 +21,12 @@ class StateManager
     
     private setState(updatedState:StateManagerState) : void
     {
+        console.group()
+        console.log(`Was last updated by ${ this.state.lastUpdatedBy }`);
         this.state = updatedState;
-        console.log(this.state);
+        console.log(`Now is updated by ${ this.state.lastUpdatedBy } at ${ this.state.lastTimestamp }`);
+        console.groupEnd();
     }
 }
-// @ts-ignore
-window.stateManager = new StateManager();
 
-// @ts-ignore
-export const stateManager:StateManager = window.stateManager;
+export const stateManager:StateManager = new StateManager();
